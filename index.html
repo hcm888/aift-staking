@@ -75,48 +75,48 @@
         }
         .total-stats-card { border-left: 4px solid #3b82f6; }
         
-        /* 新增：质押记录卡片样式（简化版） */
+        /* 新增：超紧凑质押记录卡片样式 */
         .stake-card-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* 缩小最小宽度 */
+            gap: 12px; /* 缩小间距 */
+            margin-top: 15px;
         }
         
         .stake-card {
             background: linear-gradient(145deg, #0d9488, #134e4a);
-            border-radius: 10px;
-            padding: 15px;
+            border-radius: 8px; /* 缩小圆角 */
+            padding: 12px; /* 缩小内边距 */
             position: relative;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .stake-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         
         .stake-card-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .stake-card-id {
-            font-size: 1rem; /* 缩小字体 */
+            font-size: 0.9rem; /* 进一步缩小字体 */
             font-weight: bold;
             color: #fff;
         }
         
         .stake-card-status {
-            font-size: 0.75rem; /* 缩小字体 */
-            padding: 3px 10px;
-            border-radius: 20px;
+            font-size: 0.7rem; /* 进一步缩小字体 */
+            padding: 2px 8px;
+            border-radius: 15px;
             font-weight: 600;
         }
         
@@ -139,45 +139,45 @@
         }
         
         .stake-card-info {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         
         .stake-amount {
-            font-size: 1.2rem; /* 缩小字体 */
+            font-size: 1rem; /* 进一步缩小字体 */
             font-weight: bold;
             color: #fff;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
         
         .stake-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
         
         .stake-duration {
             color: #94a3b8;
-            font-size: 0.85rem; /* 缩小字体 */
+            font-size: 0.8rem; /* 进一步缩小字体 */
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
         }
         
         .stake-time {
             color: #94a3b8;
-            font-size: 0.75rem; /* 缩小字体 */
+            font-size: 0.7rem; /* 进一步缩小字体 */
         }
         
         .stake-progress {
-            margin: 12px 0;
+            margin: 10px 0;
         }
         
         .stake-progress-info {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 6px;
-            font-size: 0.8rem; /* 缩小字体 */
+            margin-bottom: 5px;
+            font-size: 0.75rem; /* 进一步缩小字体 */
         }
         
         .stake-remaining-time {
@@ -190,22 +190,22 @@
         }
         
         .stake-progress-bar {
-            height: 6px; /* 缩小进度条高度 */
+            height: 4px; /* 进一步缩小进度条高度 */
             background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 3px;
+            border-radius: 2px;
             overflow: hidden;
         }
         
         .stake-progress-fill {
             height: 100%;
             background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            border-radius: 3px;
+            border-radius: 2px;
             transition: width 0.5s ease;
         }
         
         .stake-card-actions {
-            margin-top: 12px;
-            padding-top: 12px;
+            margin-top: 10px;
+            padding-top: 10px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
         }
@@ -213,26 +213,26 @@
         .stake-empty-state {
             grid-column: 1 / -1;
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 15px;
             color: #94a3b8;
             background-color: rgba(30, 41, 59, 0.5);
-            border-radius: 10px;
+            border-radius: 8px;
             border: 2px dashed #475569;
         }
         
         .stake-empty-icon {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
+            font-size: 2rem;
+            margin-bottom: 10px;
             color: #475569;
         }
         
         .stake-empty-text {
-            font-size: 1rem;
-            margin-bottom: 8px;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
         }
         
         .stake-empty-subtext {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #64748b;
         }
         
@@ -245,13 +245,13 @@
         
         @media (min-width: 769px) and (max-width: 1200px) {
             .stake-card-container {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr); /* 中屏幕显示3列 */
             }
         }
         
         @media (min-width: 1201px) {
             .stake-card-container {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr); /* 大屏幕显示4列 */
             }
         }
         
@@ -259,8 +259,8 @@
         .staking-btn-group .btn {
             position: relative;
             overflow: hidden;
-            font-size: 0.9rem; /* 缩小按钮字体 */
-            padding: 8px 12px;
+            font-size: 0.85rem; /* 缩小按钮字体 */
+            padding: 6px 10px;
         }
         
         .staking-btn-group .btn::after {
@@ -268,8 +268,8 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 5px;
-            height: 5px;
+            width: 4px;
+            height: 4px;
             background: rgba(255, 255, 255, 0.5);
             opacity: 0;
             border-radius: 100%;
@@ -295,8 +295,8 @@
         /* 加载动画 */
         .loading-spinner {
             display: inline-block;
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
             border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             border-top-color: #fff;
@@ -309,37 +309,60 @@
         
         /* 缩小整体字体 */
         .card-title {
-            font-size: 1.1rem;
-        }
-        
-        .stat-value {
-            font-size: 1.1rem;
-        }
-        
-        .stat-label {
-            font-size: 0.8rem;
-        }
-        
-        .warning-box {
-            font-size: 0.85rem;
-            padding: 12px;
-        }
-        
-        .warning-box h5 {
             font-size: 1rem;
         }
         
-        .form-label {
+        .stat-value {
+            font-size: 1rem;
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+        }
+        
+        .warning-box {
+            font-size: 0.8rem;
+            padding: 10px;
+        }
+        
+        .warning-box h5 {
             font-size: 0.9rem;
+        }
+        
+        .form-label {
+            font-size: 0.85rem;
         }
         
         .nav-link {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
         
         .btn-sm {
-            font-size: 0.8rem;
-            padding: 0.2rem 0.5rem;
+            font-size: 0.75rem;
+            padding: 0.15rem 0.4rem;
+        }
+        
+        /* 调整表格字体 */
+        .table {
+            font-size: 0.85rem;
+        }
+        
+        .table thead th {
+            font-size: 0.75rem;
+        }
+        
+        /* 调整容器内边距 */
+        .container.py-5 {
+            padding-top: 1.5rem !important;
+            padding-bottom: 1.5rem !important;
+        }
+        
+        .card-body {
+            padding: 1rem;
+        }
+        
+        .card.p-3 {
+            padding: 0.75rem !important;
         }
     </style>
 </head>
@@ -350,7 +373,7 @@
     <div class="warning-box">
         <h5 class="text-danger fw-bold">⚠️ 特别说明</h5>
         <ol class="mb-0">
-            <li>这个资金盘每天日化0.3%，第一天锁仓，后面29天不锁，超过30天没有收益。</li>
+            <li>1天日化0.3%，15天日化0.6%，30天日化1.2%。</li>
             <li>要崩盘前2天以上，页面会关闭质押功能，并提示解押。</li>
             <li>提示崩盘可能一周以上才会崩盘，但是别赚最后一分钱。</li>
             <li>请用一个新的干净钱包来参与。</li>
@@ -410,7 +433,7 @@
                 </div>
             </div>
             <div class="mt-2 small text-white">
-                * 注意：不同质押周期的日化率和解锁时间不同
+                * 注意：1天日化0.3%，15天日化0.6%，30天日化1.2%
             </div>
         </div>
     </div>
@@ -723,10 +746,10 @@
         }
     }
 
-    // 3. 渲染质押卡片（简化版，取消收益部分）
+    // 3. 渲染质押卡片（超紧凑版）
     async function renderStakeCards() {
         const container = document.getElementById('stakeCardsContainer');
-        container.innerHTML = '<div class="text-center py-4"><div class="loading-spinner"></div> 加载中...</div>';
+        container.innerHTML = '<div class="text-center py-3"><div class="loading-spinner"></div> 加载中...</div>';
 
         try {
             const count = await stakingContract.stakeCount(userAddress);
@@ -796,7 +819,7 @@
                 const remainingTimeStr = isLocked ? formatTimeShort(timeRemaining) : 
                                           isUnlocked ? '已解锁' : '已完成';
 
-                // 创建简化版卡片HTML（取消收益部分）
+                // 创建超紧凑版卡片HTML
                 html += `
                     <div class="stake-card" id="stake-card-${i}">
                         <div class="stake-card-header">
@@ -913,15 +936,15 @@
             });
         }
         
-        // 添加按钮提示
+        // 添加按钮提示 - 使用新的日化率配置
         const buttons = [stake1DayBtn, stake15DaysBtn, stake30DaysBtn];
         const durations = [1, 15, 30];
-        const dailyRate = 0.3; // AIFT日化率固定为0.3%
+        const dailyRates = [0.3, 0.6, 1.2]; // 新的日化率配置
         
         buttons.forEach((btn, index) => {
             if (btn) {
-                const totalProfit = (dailyRate * durations[index]).toFixed(1);
-                btn.setAttribute('title', `日化: ${dailyRate}%, 总收益: ${totalProfit}%`);
+                const totalProfit = (dailyRates[index] * durations[index]).toFixed(1);
+                btn.setAttribute('title', `日化: ${dailyRates[index]}%, 总收益: ${totalProfit}%`);
             }
         });
     }
@@ -1025,8 +1048,9 @@
                     }
                 }
                 
-                // 4. 计算预计收益
-                const dailyRate = 0.3; // AIFT固定日化0.3%
+                // 4. 计算预计收益 - 使用新的日化率配置
+                const dailyRates = [0.3, 0.6, 1.2]; // 新的日化率配置
+                const dailyRate = dailyRates[stakeIndex];
                 const expectedProfit = (amount * (dailyRate / 100) * durationDays).toFixed(4);
                 
                 // 5. 确认对话框
